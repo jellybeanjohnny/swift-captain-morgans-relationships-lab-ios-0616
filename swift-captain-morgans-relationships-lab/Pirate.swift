@@ -22,11 +22,11 @@ class Pirate: NSManagedObject {
         
     }
     
-    func addShips(values: Set) {
+    func addShips(values: Set<Ship>) {
         
     }
     
-    func removeShips(values: Set) {
+    func removeShips(values: Set<Ship>) {
         
     }
 }

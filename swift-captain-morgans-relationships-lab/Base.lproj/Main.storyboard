@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelButtonTapped:" destination="PRa-L8-6bL" eventType="touchUpInside" id="92a-zC-4AK"/>
+                                    <action selector="cancelButtonTapped:" destination="PRa-L8-6bL" eventType="touchUpInside" id="Ddi-Vx-ja7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-MO-Bl1">
@@ -42,14 +42,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveButtonTapped:" destination="PRa-L8-6bL" eventType="touchUpInside" id="Ng6-dx-6pr"/>
+                                    <action selector="saveButtonTapped:" destination="PRa-L8-6bL" eventType="touchUpInside" id="BJM-cU-FWz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="pirateNameField" destination="3eQ-oM-U21" id="Gug-TU-Pqj"/>
+                        <outlet property="pirateNameField" destination="3eQ-oM-U21" id="cqb-Ds-g9y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gj-LJ-ZgF" userLabel="First Responder" sceneMemberID="firstResponder"/>

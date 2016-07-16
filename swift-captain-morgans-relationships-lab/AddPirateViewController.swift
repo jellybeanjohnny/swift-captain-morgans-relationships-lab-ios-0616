@@ -9,6 +9,40 @@
 import UIKit
 import CoreData
 
-class AddPirateViewController: UIViewController {
+class AddPirateViewController: UIViewController
+{
+    
+    @IBOutlet weak var pirateNameField: UITextField!
+    
+    @IBAction func saveButtonTapped(sender: AnyObject)
+    {
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let entityDescription = NSEntityDescription.entityForName("Pirate",
+                                                                  inManagedObjectContext: managedObjectContext)
+        let newPirate = Pirate(entity: entityDescription!,
+                               insertIntoManagedObjectContext: managedObjectContext)
+        
+        if let text = pirateNameField.text
+        {
+            newPirate.name = text
+        }
 
+        do
+        {
+            try managedObjectContext.save()
+        }
+        
+        catch let error
+        {
+            print("Could not save Pirate: \(error)")
+        }
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+}
+    
+    
+    @IBAction func cancelButtonTapped(sender: AnyObject)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
