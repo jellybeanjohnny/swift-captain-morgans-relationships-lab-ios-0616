@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<entity name="Engine" representedClassName="Engine" syncable="YES">
+    <attribute name="engineType" optional="YES" attributeType="String" syncable="YES"/>
+    <relationship name="ship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ship" inverseName="engine" inverseEntity="Ship" syncable="YES"/>
+</entity>
+<entity name="Pirate" representedClassName="Pirate" syncable="YES">
+    <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <relationship name="ships" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ship" inverseName="pirate" inverseEntity="Ship" syncable="YES"/>
+</entity>
+<entity name="Ship" representedClassName="Ship" syncable="YES">
+    <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <relationship name="engine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Engine" inverseName="ship" inverseEntity="Engine" syncable="YES"/>
+    <relationship name="pirate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pirate" inverseName="ships" inverseEntity="Pirate" syncable="YES"/>
+</entity>
+<elements>
+    <element name="Engine" positionX="-63" positionY="-18" width="128" height="73"/>
+    <element name="Pirate" positionX="-54" positionY="-9" width="128" height="73"/>
+    <element name="Ship" positionX="-36" positionY="9" width="128" height="88"/>
+</elements>
 </model>
