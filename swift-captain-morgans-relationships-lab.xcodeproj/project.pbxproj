@@ -1,0 +1,704 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C45CA8A1D3A9A7F0030A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */; };
+		4C45CA8C1D3A9A7F0030A41D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CA8B1D3A9A7F0030A41D /* ViewController.swift */; };
+		4C45CA8F1D3A9A7F0030A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */; };
+		4C45CA921D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CA901D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld */; };
+		4C45CA941D3A9A7F0030A41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA931D3A9A7F0030A41D /* Assets.xcassets */; };
+		4C45CA971D3A9A7F0030A41D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA951D3A9A7F0030A41D /* LaunchScreen.storyboard */; };
+		4C45CAA21D3A9A7F0030A41D /* swift_captain_morgans_relationships_labTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CAA11D3A9A7F0030A41D /* swift_captain_morgans_relationships_labTests.swift */; };
+		4C45CAAD1D3A9A7F0030A41D /* swift_captain_morgans_relationships_labUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CAAC1D3A9A7F0030A41D /* swift_captain_morgans_relationships_labUITests.swift */; };
+		81427BE7E3FD9BDBF7208417 /* Pods_swift_captain_morgans_relationships_lab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA927C49991813A3EE6CA09B /* Pods_swift_captain_morgans_relationships_lab.framework */; };
+		D80ED7A6E31C9495CFB3AF18 /* Pods_swift_captain_morgans_relationships_labTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1531B3A593C483990D92B818 /* Pods_swift_captain_morgans_relationships_labTests.framework */; };
+		F8FC2493C4087B421442CB78 /* Pods_swift_captain_morgans_relationships_labUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BEEDDD1739C5541CCE06FC /* Pods_swift_captain_morgans_relationships_labUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C45CA9E1D3A9A7F0030A41D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C45CA7E1D3A9A7F0030A41D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C45CA851D3A9A7F0030A41D;
+			remoteInfo = "swift-captain-morgans-relationships-lab";
+		};
+		4C45CAA91D3A9A7F0030A41D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C45CA7E1D3A9A7F0030A41D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C45CA851D3A9A7F0030A41D;
+			remoteInfo = "swift-captain-morgans-relationships-lab";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A8358E5A98A41C8605E72F6 /* Pods-swift-captain-morgans-relationships-labTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-captain-morgans-relationships-labTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-captain-morgans-relationships-labTests/Pods-swift-captain-morgans-relationships-labTests.release.xcconfig"; sourceTree = "<group>"; };
+		1531B3A593C483990D92B818 /* Pods_swift_captain_morgans_relationships_labTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_captain_morgans_relationships_labTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45B507D73D8F05329C3EF68A /* Pods-swift-captain-morgans-relationships-labTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-captain-morgans-relationships-labTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-captain-morgans-relationships-labTests/Pods-swift-captain-morgans-relationships-labTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C45CA861D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-captain-morgans-relationships-lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C45CA8B1D3A9A7F0030A41D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C45CA8E1D3A9A7F0030A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C45CA911D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = swift_captain_morgans_relationships_lab.xcdatamodel; sourceTree = "<group>"; };
+		4C45CA931D3A9A7F0030A41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C45CA961D3A9A7F0030A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C45CA981D3A9A7F0030A41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C45CA9D1D3A9A7F0030A41D /* swift-captain-morgans-relationships-labTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-captain-morgans-relationships-labTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C45CAA11D3A9A7F0030A41D /* swift_captain_morgans_relationships_labTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_captain_morgans_relationships_labTests.swift; sourceTree = "<group>"; };
+		4C45CAA31D3A9A7F0030A41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C45CAA81D3A9A7F0030A41D /* swift-captain-morgans-relationships-labUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-captain-morgans-relationships-labUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C45CAAC1D3A9A7F0030A41D /* swift_captain_morgans_relationships_labUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_captain_morgans_relationships_labUITests.swift; sourceTree = "<group>"; };
+		4C45CAAE1D3A9A7F0030A41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B7C8A36D12137466CAF508E /* Pods-swift-captain-morgans-relationships-labUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-captain-morgans-relationships-labUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-captain-morgans-relationships-labUITests/Pods-swift-captain-morgans-relationships-labUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7EB2748100D1C5C1D9DA9FD2 /* Pods-swift-captain-morgans-relationships-labUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-captain-morgans-relationships-labUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-captain-morgans-relationships-labUITests/Pods-swift-captain-morgans-relationships-labUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A0BEEDDD1739C5541CCE06FC /* Pods_swift_captain_morgans_relationships_labUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_captain_morgans_relationships_labUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40AE21082F4E8AB7925FA04 /* Pods-swift-captain-morgans-relationships-lab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-captain-morgans-relationships-lab.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-captain-morgans-relationships-lab/Pods-swift-captain-morgans-relationships-lab.release.xcconfig"; sourceTree = "<group>"; };
+		DA927C49991813A3EE6CA09B /* Pods_swift_captain_morgans_relationships_lab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_captain_morgans_relationships_lab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4778DEBF9A38C1EC02AF341 /* Pods-swift-captain-morgans-relationships-lab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-captain-morgans-relationships-lab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-captain-morgans-relationships-lab/Pods-swift-captain-morgans-relationships-lab.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C45CA831D3A9A7F0030A41D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81427BE7E3FD9BDBF7208417 /* Pods_swift_captain_morgans_relationships_lab.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C45CA9A1D3A9A7F0030A41D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D80ED7A6E31C9495CFB3AF18 /* Pods_swift_captain_morgans_relationships_labTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C45CAA51D3A9A7F0030A41D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8FC2493C4087B421442CB78 /* Pods_swift_captain_morgans_relationships_labUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		498C8DAA64880ED90E48D9F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4778DEBF9A38C1EC02AF341 /* Pods-swift-captain-morgans-relationships-lab.debug.xcconfig */,
+				C40AE21082F4E8AB7925FA04 /* Pods-swift-captain-morgans-relationships-lab.release.xcconfig */,
+				45B507D73D8F05329C3EF68A /* Pods-swift-captain-morgans-relationships-labTests.debug.xcconfig */,
+				0A8358E5A98A41C8605E72F6 /* Pods-swift-captain-morgans-relationships-labTests.release.xcconfig */,
+				6B7C8A36D12137466CAF508E /* Pods-swift-captain-morgans-relationships-labUITests.debug.xcconfig */,
+				7EB2748100D1C5C1D9DA9FD2 /* Pods-swift-captain-morgans-relationships-labUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4C45CA7D1D3A9A7F0030A41D = {
+			isa = PBXGroup;
+			children = (
+				4C45CA881D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab */,
+				4C45CAA01D3A9A7F0030A41D /* swift-captain-morgans-relationships-labTests */,
+				4C45CAAB1D3A9A7F0030A41D /* swift-captain-morgans-relationships-labUITests */,
+				4C45CA871D3A9A7F0030A41D /* Products */,
+				498C8DAA64880ED90E48D9F3 /* Pods */,
+				C504D8ECFDDBE5CCD0D3DCEF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4C45CA871D3A9A7F0030A41D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C45CA861D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab.app */,
+				4C45CA9D1D3A9A7F0030A41D /* swift-captain-morgans-relationships-labTests.xctest */,
+				4C45CAA81D3A9A7F0030A41D /* swift-captain-morgans-relationships-labUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C45CA881D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab */ = {
+			isa = PBXGroup;
+			children = (
+				4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */,
+				4C45CA8B1D3A9A7F0030A41D /* ViewController.swift */,
+				4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */,
+				4C45CA931D3A9A7F0030A41D /* Assets.xcassets */,
+				4C45CA951D3A9A7F0030A41D /* LaunchScreen.storyboard */,
+				4C45CA981D3A9A7F0030A41D /* Info.plist */,
+				4C45CA901D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld */,
+			);
+			path = "swift-captain-morgans-relationships-lab";
+			sourceTree = "<group>";
+		};
+		4C45CAA01D3A9A7F0030A41D /* swift-captain-morgans-relationships-labTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C45CAA11D3A9A7F0030A41D /* swift_captain_morgans_relationships_labTests.swift */,
+				4C45CAA31D3A9A7F0030A41D /* Info.plist */,
+			);
+			path = "swift-captain-morgans-relationships-labTests";
+			sourceTree = "<group>";
+		};
+		4C45CAAB1D3A9A7F0030A41D /* swift-captain-morgans-relationships-labUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C45CAAC1D3A9A7F0030A41D /* swift_captain_morgans_relationships_labUITests.swift */,
+				4C45CAAE1D3A9A7F0030A41D /* Info.plist */,
+			);
+			path = "swift-captain-morgans-relationships-labUITests";
+			sourceTree = "<group>";
+		};
+		C504D8ECFDDBE5CCD0D3DCEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA927C49991813A3EE6CA09B /* Pods_swift_captain_morgans_relationships_lab.framework */,
+				1531B3A593C483990D92B818 /* Pods_swift_captain_morgans_relationships_labTests.framework */,
+				A0BEEDDD1739C5541CCE06FC /* Pods_swift_captain_morgans_relationships_labUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C45CA851D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C45CAB11D3A9A7F0030A41D /* Build configuration list for PBXNativeTarget "swift-captain-morgans-relationships-lab" */;
+			buildPhases = (
+				6F235A25D5E8C9D8136258C8 /* [CP] Check Pods Manifest.lock */,
+				4C45CA821D3A9A7F0030A41D /* Sources */,
+				4C45CA831D3A9A7F0030A41D /* Frameworks */,
+				4C45CA841D3A9A7F0030A41D /* Resources */,
+				418AEDA5CB4C7EED4A507824 /* [CP] Embed Pods Frameworks */,
+				37CADF948C7E3457CA2B9E5C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swift-captain-morgans-relationships-lab";
+			productName = "swift-captain-morgans-relationships-lab";
+			productReference = 4C45CA861D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C45CA9C1D3A9A7F0030A41D /* swift-captain-morgans-relationships-labTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C45CAB41D3A9A7F0030A41D /* Build configuration list for PBXNativeTarget "swift-captain-morgans-relationships-labTests" */;
+			buildPhases = (
+				ACEC76683E062E58E090611A /* [CP] Check Pods Manifest.lock */,
+				4C45CA991D3A9A7F0030A41D /* Sources */,
+				4C45CA9A1D3A9A7F0030A41D /* Frameworks */,
+				4C45CA9B1D3A9A7F0030A41D /* Resources */,
+				782ED219E16FCD633E336EA3 /* [CP] Embed Pods Frameworks */,
+				59DFF7C8EB3E2D9C004A0F38 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C45CA9F1D3A9A7F0030A41D /* PBXTargetDependency */,
+			);
+			name = "swift-captain-morgans-relationships-labTests";
+			productName = "swift-captain-morgans-relationships-labTests";
+			productReference = 4C45CA9D1D3A9A7F0030A41D /* swift-captain-morgans-relationships-labTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C45CAA71D3A9A7F0030A41D /* swift-captain-morgans-relationships-labUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C45CAB71D3A9A7F0030A41D /* Build configuration list for PBXNativeTarget "swift-captain-morgans-relationships-labUITests" */;
+			buildPhases = (
+				FD4C278B48AF6E4C44DE5583 /* [CP] Check Pods Manifest.lock */,
+				4C45CAA41D3A9A7F0030A41D /* Sources */,
+				4C45CAA51D3A9A7F0030A41D /* Frameworks */,
+				4C45CAA61D3A9A7F0030A41D /* Resources */,
+				F0023ADD6CF20543ECB427D7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C45CAAA1D3A9A7F0030A41D /* PBXTargetDependency */,
+			);
+			name = "swift-captain-morgans-relationships-labUITests";
+			productName = "swift-captain-morgans-relationships-labUITests";
+			productReference = 4C45CAA81D3A9A7F0030A41D /* swift-captain-morgans-relationships-labUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C45CA7E1D3A9A7F0030A41D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Flatiron School";
+				TargetAttributes = {
+					4C45CA851D3A9A7F0030A41D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					4C45CA9C1D3A9A7F0030A41D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4C45CA851D3A9A7F0030A41D;
+					};
+					4C45CAA71D3A9A7F0030A41D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4C45CA851D3A9A7F0030A41D;
+					};
+				};
+			};
+			buildConfigurationList = 4C45CA811D3A9A7F0030A41D /* Build configuration list for PBXProject "swift-captain-morgans-relationships-lab" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C45CA7D1D3A9A7F0030A41D;
+			productRefGroup = 4C45CA871D3A9A7F0030A41D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C45CA851D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab */,
+				4C45CA9C1D3A9A7F0030A41D /* swift-captain-morgans-relationships-labTests */,
+				4C45CAA71D3A9A7F0030A41D /* swift-captain-morgans-relationships-labUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C45CA841D3A9A7F0030A41D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C45CA971D3A9A7F0030A41D /* LaunchScreen.storyboard in Resources */,
+				4C45CA941D3A9A7F0030A41D /* Assets.xcassets in Resources */,
+				4C45CA8F1D3A9A7F0030A41D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C45CA9B1D3A9A7F0030A41D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C45CAA61D3A9A7F0030A41D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37CADF948C7E3457CA2B9E5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swift-captain-morgans-relationships-lab/Pods-swift-captain-morgans-relationships-lab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		418AEDA5CB4C7EED4A507824 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swift-captain-morgans-relationships-lab/Pods-swift-captain-morgans-relationships-lab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59DFF7C8EB3E2D9C004A0F38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swift-captain-morgans-relationships-labTests/Pods-swift-captain-morgans-relationships-labTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F235A25D5E8C9D8136258C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		782ED219E16FCD633E336EA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swift-captain-morgans-relationships-labTests/Pods-swift-captain-morgans-relationships-labTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACEC76683E062E58E090611A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0023ADD6CF20543ECB427D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swift-captain-morgans-relationships-labUITests/Pods-swift-captain-morgans-relationships-labUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4C278B48AF6E4C44DE5583 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C45CA821D3A9A7F0030A41D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C45CA8C1D3A9A7F0030A41D /* ViewController.swift in Sources */,
+				4C45CA921D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld in Sources */,
+				4C45CA8A1D3A9A7F0030A41D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C45CA991D3A9A7F0030A41D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C45CAA21D3A9A7F0030A41D /* swift_captain_morgans_relationships_labTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C45CAA41D3A9A7F0030A41D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C45CAAD1D3A9A7F0030A41D /* swift_captain_morgans_relationships_labUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C45CA9F1D3A9A7F0030A41D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C45CA851D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab */;
+			targetProxy = 4C45CA9E1D3A9A7F0030A41D /* PBXContainerItemProxy */;
+		};
+		4C45CAAA1D3A9A7F0030A41D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C45CA851D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab */;
+			targetProxy = 4C45CAA91D3A9A7F0030A41D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C45CA8E1D3A9A7F0030A41D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C45CA951D3A9A7F0030A41D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C45CA961D3A9A7F0030A41D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C45CAAF1D3A9A7F0030A41D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C45CAB01D3A9A7F0030A41D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C45CAB21D3A9A7F0030A41D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4778DEBF9A38C1EC02AF341 /* Pods-swift-captain-morgans-relationships-lab.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "swift-captain-morgans-relationships-lab/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FlatironSchool.swift-captain-morgans-relationships-lab";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4C45CAB31D3A9A7F0030A41D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C40AE21082F4E8AB7925FA04 /* Pods-swift-captain-morgans-relationships-lab.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "swift-captain-morgans-relationships-lab/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FlatironSchool.swift-captain-morgans-relationships-lab";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4C45CAB51D3A9A7F0030A41D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45B507D73D8F05329C3EF68A /* Pods-swift-captain-morgans-relationships-labTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "swift-captain-morgans-relationships-labTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FlatironSchool.swift-captain-morgans-relationships-labTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-captain-morgans-relationships-lab.app/swift-captain-morgans-relationships-lab";
+			};
+			name = Debug;
+		};
+		4C45CAB61D3A9A7F0030A41D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A8358E5A98A41C8605E72F6 /* Pods-swift-captain-morgans-relationships-labTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "swift-captain-morgans-relationships-labTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FlatironSchool.swift-captain-morgans-relationships-labTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-captain-morgans-relationships-lab.app/swift-captain-morgans-relationships-lab";
+			};
+			name = Release;
+		};
+		4C45CAB81D3A9A7F0030A41D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7C8A36D12137466CAF508E /* Pods-swift-captain-morgans-relationships-labUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "swift-captain-morgans-relationships-labUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FlatironSchool.swift-captain-morgans-relationships-labUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "swift-captain-morgans-relationships-lab";
+			};
+			name = Debug;
+		};
+		4C45CAB91D3A9A7F0030A41D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB2748100D1C5C1D9DA9FD2 /* Pods-swift-captain-morgans-relationships-labUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "swift-captain-morgans-relationships-labUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FlatironSchool.swift-captain-morgans-relationships-labUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "swift-captain-morgans-relationships-lab";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C45CA811D3A9A7F0030A41D /* Build configuration list for PBXProject "swift-captain-morgans-relationships-lab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C45CAAF1D3A9A7F0030A41D /* Debug */,
+				4C45CAB01D3A9A7F0030A41D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C45CAB11D3A9A7F0030A41D /* Build configuration list for PBXNativeTarget "swift-captain-morgans-relationships-lab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C45CAB21D3A9A7F0030A41D /* Debug */,
+				4C45CAB31D3A9A7F0030A41D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C45CAB41D3A9A7F0030A41D /* Build configuration list for PBXNativeTarget "swift-captain-morgans-relationships-labTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C45CAB51D3A9A7F0030A41D /* Debug */,
+				4C45CAB61D3A9A7F0030A41D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C45CAB71D3A9A7F0030A41D /* Build configuration list for PBXNativeTarget "swift-captain-morgans-relationships-labUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C45CAB81D3A9A7F0030A41D /* Debug */,
+				4C45CAB91D3A9A7F0030A41D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C45CA901D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C45CA911D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodel */,
+			);
+			currentVersion = 4C45CA911D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodel */;
+			path = swift_captain_morgans_relationships_lab.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4C45CA7E1D3A9A7F0030A41D /* Project object */;
+}
