@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import CoreData
+
+class Engine: NSManagedObject {
+    
+    @NSManaged var engineType: String
+    @NSManaged var ship: Ship
+    
+}

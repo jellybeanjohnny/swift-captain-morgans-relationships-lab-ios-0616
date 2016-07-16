@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import CoreData
+
+class Ship: NSManagedObject {
+    
+    @NSManaged var name: String
+    @NSManaged var engine: Engine
+    @NSManaged var pirate: Pirate
+    
+    
+}
