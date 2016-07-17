@@ -9,6 +9,46 @@
 import UIKit
 import CoreData
 
-class AddShipViewController: UIViewController {
+class AddShipViewController: UIViewController
+{
+    @IBOutlet weak var shipNameField: UITextField!
+    @IBOutlet weak var engineTypeField: UITextField!
+    
+    let pirate: Pirate
+
+    @IBAction func saveButtonTapped(sender: AnyObject)
+    {
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let entityDescription = NSEntityDescription.entityForName("Ship",
+                                                                  inManagedObjectContext: managedObjectContext)
+        let newShip = Ship(entity: entityDescription!,
+                               insertIntoManagedObjectContext: managedObjectContext)
+        
+        if let nameText = shipNameField.text, let engineText = engineTypeField.text
+        {
+            newShip.name = nameText
+            newShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine",
+                                                                                 inManagedObjectContext: managedObjectContext)
+            newShip.engine.engineType = engineText
+        }
+        
+        do
+        {
+            try managedObjectContext.save()
+        }
+            
+        catch let error
+        {
+            print("Could not save the Ship: \(error)")
+        }
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    @IBAction func cancelButtonTapped(sender: AnyObject)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }

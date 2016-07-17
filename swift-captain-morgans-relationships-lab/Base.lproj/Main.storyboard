@@ -275,7 +275,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelButtonTapped:" destination="TBS-cg-Qyo" eventType="touchUpInside" id="4oJ-lY-SHm"/>
+                                    <action selector="cancelButtonTapped:" destination="TBS-cg-Qyo" eventType="touchUpInside" id="8n5-Ey-D2r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2C-uj-REF">
@@ -284,7 +284,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveButtonTapped:" destination="TBS-cg-Qyo" eventType="touchUpInside" id="TwO-K1-bqG"/>
+                                    <action selector="saveButtonTapped:" destination="TBS-cg-Qyo" eventType="touchUpInside" id="3HB-vp-oXV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Engine Type" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3v-zI-eqT">
@@ -296,8 +296,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="engineTypeField" destination="C3v-zI-eqT" id="F0T-MJ-OiZ"/>
-                        <outlet property="shipNameField" destination="vdH-wS-gy1" id="Qus-aX-xsR"/>
+                        <outlet property="engineTypeField" destination="C3v-zI-eqT" id="NNl-pw-kWx"/>
+                        <outlet property="shipNameField" destination="vdH-wS-gy1" id="pYS-y1-4Jp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNE-iF-6VK" userLabel="First Responder" sceneMemberID="firstResponder"/>

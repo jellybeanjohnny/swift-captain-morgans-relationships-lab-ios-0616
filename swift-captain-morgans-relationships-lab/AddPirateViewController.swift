@@ -11,7 +11,6 @@ import CoreData
 
 class AddPirateViewController: UIViewController
 {
-    
     @IBOutlet weak var pirateNameField: UITextField!
     
     @IBAction func saveButtonTapped(sender: AnyObject)
@@ -39,7 +38,6 @@ class AddPirateViewController: UIViewController
         
         self.dismissViewControllerAnimated(true, completion: nil)
 }
-    
     
     @IBAction func cancelButtonTapped(sender: AnyObject)
     {
