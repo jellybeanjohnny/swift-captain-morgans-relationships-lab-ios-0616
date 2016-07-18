@@ -11,7 +11,7 @@ import CoreData
 
 class ShipsViewController: UITableViewController
 {
-    let cellIdentifier: String = "shipCell"
+    let CellIdentifier: String = "shipCell"
     
     let pirate: Pirate = Pirate()
     
@@ -39,7 +39,7 @@ class ShipsViewController: UITableViewController
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
         
         let ships = Array(pirate.ships)
         
@@ -60,27 +60,17 @@ class ShipsViewController: UITableViewController
             
             nextVC.pirate = pirate
         }
-        
+            
         else
         {
             let nextVC = segue.destinationViewController as! ShipDetailViewController
             
-            let selectedIndexPath = tableView.indexPathForSelectedRow
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
             
             let ships = Array(pirate.ships)
             
             nextVC.ship = ships[selectedIndexPath.row]
         }
-        
-        if (![segue.identifier isEqualToString:@"shipDetailSegue"]) {
-            FISAddShipViewController *nextVC = segue.destinationViewController;
-            nextVC.pirate = self.pirate;
-        } else {
-            FISShipDetailViewController *nextVC = segue.destinationViewController;
-            NSIndexPath *selectedIP = [self.tableView indexPathForSelectedRow];
-            NSArray *ships = [self.pirate.ships allObjects];
-            nextVC.ship = ships[selectedIP.row];
-        }
     }
-
+    
 }

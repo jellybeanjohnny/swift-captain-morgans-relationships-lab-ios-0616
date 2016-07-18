@@ -15,19 +15,58 @@ class PiratesViewController: UITableViewController, NSFetchedResultsControllerDe
     
     var frc: NSFetchedResultsController?
     
-    static let CellIdentifier  = "pirateCell"
-    
-    override func viewDidLoad() {
-        let model = dataStore.managedObjectModel
-        
-        
+    let CellIdentifier  = "pirateCell"
+      
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool)
+    {
         super.viewWillAppear(true)
-        dataStore.fetchData()
+        
+        let store = DataStore.shareDataStore
+        
+        store.fetchData()
+        
         tableView.reloadData()
     }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return dataStore.pirates.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
         
+        let pirates = Array(dataStore.pirates)
         
+        let currentPirate = pirates[indexPath.row]
+        
+        cell.textLabel?.text = currentPirate.name
+        
+        cell.detailTextLabel?.text = String.init(format: "%lu", currentPirate.ships.count)
+        
+        return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier != "shipsSegue"
+        {
+            return
+        }
+            
+        let nextVC = segue.destinationViewController as! ShipsViewController
+        
+        let selectedIndexPath = tableView.indexPathForSelectedRow!
+        
+        let selectedPirate = dataStore.pirates[selectedIndexPath.row]
+        
+        nextVC.pirate = selectedPirate
+    }
+    
 }
