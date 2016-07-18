@@ -11,12 +11,12 @@ import CoreData
 
 class PiratesViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    var dataStore: DataStore = DataStore()
+    var store: DataStore = DataStore.shareDataStore
     
     var frc: NSFetchedResultsController?
     
     let CellIdentifier  = "pirateCell"
-      
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -35,14 +35,14 @@ class PiratesViewController: UITableViewController, NSFetchedResultsControllerDe
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return dataStore.pirates.count
+        return store.pirates.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
         
-        let pirates = Array(dataStore.pirates)
+        let pirates = Array(store.pirates)
         
         let currentPirate = pirates[indexPath.row]
         
@@ -64,7 +64,7 @@ class PiratesViewController: UITableViewController, NSFetchedResultsControllerDe
         
         let selectedIndexPath = tableView.indexPathForSelectedRow!
         
-        let selectedPirate = dataStore.pirates[selectedIndexPath.row]
+        let selectedPirate = store.pirates[selectedIndexPath.row]
         
         nextVC.pirate = selectedPirate
     }

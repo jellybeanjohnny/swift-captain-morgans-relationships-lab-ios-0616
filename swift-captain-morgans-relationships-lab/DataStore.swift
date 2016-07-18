@@ -15,29 +15,6 @@ class DataStore {
     
     var pirates: [Pirate] = []
     
-    //    typedef NS_ENUM(NSInteger, EngineType) {
-    //    Sail=1,
-    //    Gas,
-    //    Electric,
-    //    Solar
-    //    };
-    //    @end
-    //    @implementation FISPiratesDataStore
-    //    @synthesize managedObjectContext = _managedObjectContext;
-    //
-    //    # pragma mark - Singleton
-    //
-    //    + (instancetype)sharedPiratesDataStore {
-    //    static FISPiratesDataStore *_sharedPiratesDataStore = nil;
-    //    static dispatch_once_t onceToken;
-    //    dispatch_once(&onceToken, ^{
-    //    _sharedPiratesDataStore = [[FISPiratesDataStore alloc] init];
-    //    });
-    //
-    //    return _sharedPiratesDataStore;
-    //    }
-    //
-    
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.FlatironSchool.swift_captain_morgans_relationships_lab" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -104,8 +81,6 @@ class DataStore {
         let nameSorter = NSSortDescriptor(key: "Name", ascending: true)
         
         pirateRequest.sortDescriptors = [nameSorter]
-        
-
         
         do
         {

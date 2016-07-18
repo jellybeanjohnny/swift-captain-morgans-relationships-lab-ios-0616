@@ -11,13 +11,19 @@ import CoreData
 
 class ShipsViewController: UITableViewController
 {
+    
+    var store: DataStore = DataStore.shareDataStore
+    
+    var frc: NSFetchedResultsController?
+    
     let CellIdentifier: String = "shipCell"
     
-    let pirate: Pirate = Pirate()
+    var pirate: Pirate
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(animated: Bool)
@@ -27,7 +33,7 @@ class ShipsViewController: UITableViewController
         let store = DataStore.shareDataStore
         
         store.fetchData()
-        
+                
         tableView.reloadData()
     }
     

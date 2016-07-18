@@ -12,9 +12,10 @@ import CoreData
 class AddShipViewController: UIViewController
 {
     @IBOutlet weak var shipNameField: UITextField!
+    
     @IBOutlet weak var engineTypeField: UITextField!
     
-    var pirate = Pirate(context: DataStore().managedObjectContext, name: <#T##String#>, ships: <#T##Set<Ship>#>)
+    var pirate = Pirate(context: DataStore().managedObjectContext, name: "Jim" , ships: [])
 
     @IBAction func saveButtonTapped(sender: AnyObject)
     {

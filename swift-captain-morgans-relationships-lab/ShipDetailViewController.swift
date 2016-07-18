@@ -11,7 +11,9 @@ import CoreData
 
 class ShipDetailViewController: UIViewController {
     
-    var ship: Ship = Ship(context: <#T##NSManagedObjectContext#>, name: <#T##String#>, engine: <#T##Engine#>, pirate: <#T##Pirate#>)
+    let store = DataStore.shareDataStore
+    
+    var ship: Ship?
     
     @IBOutlet weak var shipNameLabel: UILabel!
     
@@ -23,11 +25,9 @@ class ShipDetailViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        shipNameLabel.text = ship.name
-        
-        pirateNameLabel.text = ship.pirate.name
-        
-        propulsionTypeLabel.text = ship.engine.engineType
+        shipNameLabel.text = ship?.name
+        pirateNameLabel.text = ship?.pirate.name
+        propulsionTypeLabel.text = ship?.engine.engineType
     }
     
 }
