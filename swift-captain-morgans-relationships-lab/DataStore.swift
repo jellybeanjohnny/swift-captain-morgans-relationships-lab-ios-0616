@@ -69,7 +69,6 @@ class DataStore {
             } catch {
                 let nserror = error as NSError
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-
             }
         }
     }
@@ -113,11 +112,12 @@ class DataStore {
                 currentShip.name = "Awesome Ship #" + String(shipNumber)
                 currentShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
                 currentShip.engine.engineType = Engine.randomEngineType()
-                currentPirate.addShipObject(currentShip)
+                currentPirate.ships.insert(currentShip)
             }
         }
         
         saveContext()
         fetchData()
     }
+    
 }
