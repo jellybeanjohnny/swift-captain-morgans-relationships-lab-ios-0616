@@ -51,15 +51,15 @@ class Engine: NSManagedObject {
         self.ship = ship
     }
     
-    class func newEngine(context: NSManagedObjectContext) -> Engine
-    {
-        let newEngine = NSEntityDescription.insertNewObjectForEntityForName("Engine",
-                                                                            inManagedObjectContext: context) as! Engine
-        
-        newEngine.engineType = randomEngineType()
-        
-        return Engine(context: context, engineType: newEngine.engineType, ship: self.ship)
-    }
+//    class func newEngine(context: NSManagedObjectContext) -> Engine
+//    {
+//        let newEngine = NSEntityDescription.insertNewObjectForEntityForName("Engine",
+//                                                                            inManagedObjectContext: context) as! Engine
+//        
+//        newEngine.engineType = randomEngineType()
+//        
+//        return Engine(context: context, engineType: newEngine.engineType, ship: )
+//    }
     
     class func randomEngineType() -> String
     {

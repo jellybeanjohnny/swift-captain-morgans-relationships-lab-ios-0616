@@ -90,11 +90,9 @@ class DataStore {
             do {
                 try managedObjectContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                abort()
+
             }
         }
     }
@@ -107,114 +105,55 @@ class DataStore {
         
         pirateRequest.sortDescriptors = [nameSorter]
         
-        do {
+
+        
+        do
+        {
+            try pirates = managedObjectContext.executeFetchRequest(pirateRequest) as! [Pirate]
+        }
+        
+        catch
+        {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            pirates = []
+        }
+        
+        if pirates.count == 0
+        {
+            generateTestData()
+        }
+    }
+    
+    func generateTestData()
+    {
+        var numberOfShips = [3, 5, 2]
+        
+        for pirateCount in 0..<numberOfShips.count
+        {
+            let currentPirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate",
+                                                                                    inManagedObjectContext: managedObjectContext) as! Pirate
             
+            currentPirate.name = "AAARGH! Pirate #" + String(pirateCount)
+            
+            for _ in 0..<numberOfShips[pirateCount]
+            {
+                let currentShip = NSEntityDescription.insertNewObjectForEntityForName("Ship",
+                                                                                     inManagedObjectContext: managedObjectContext) as! Ship
+                
+                currentShip.name = "Awesome Ship #" + String(pirateCount)
+                
+                currentShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine",
+                                                                                         inManagedObjectContext: managedObjectContext) as! Engine
+                
+                currentShip.engine.engineType = Engine.randomEngineType()
+                
+//                currentPirate.addShipsObject(currentShip)
+            }
         }
-        self.pirates = [self.managedObjectContext executeFetchRequest:pirateRequest error:nil];
-        
-        if ([self.pirates count]==0) {
-            [self generateTestData];
-        }
-    }
-    
-    func fetchData ()
-    {
-        
-        var error:NSError? = nil
-        
-        let messagesRequest = NSFetchRequest(entityName: "Message")
-        
-        let createdAtSorter = NSSortDescriptor(key: "createdAt", ascending:true)
-        
-        messagesRequest.sortDescriptors = [createdAtSorter]
-        
-        do{
-            messages = try managedObjectContext.executeFetchRequest(messagesRequest) as! [Message]
-        }catch let nserror1 as NSError{
-            error = nserror1
-            messages = []
-        }
-        
-        if messages.count == 0 {
-            generateTestData()
-        }
-        
-        ////         perform a fetch request to fill an array property on your datastore
-    }
-    
-    func generateTestData() {
-        
-        let pirateOne: Pirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
-        
-        messageOne.content = "Message 1"
-        messageOne.createdAt = NSDate()
-        
-        let messageTwo: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
-        
-        messageTwo.content = "Message 2"
-        messageTwo.createdAt = NSDate()
-        
-        let messageThree: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
-        
-        messageThree.content = "Message 3"
-        messageThree.createdAt = NSDate()
         
         saveContext()
+        
         fetchData()
     }
 }
-
-
-/*
-class DataStore {
- 
-    
-    func fetchData ()
-    {
-        
-        var error:NSError? = nil
-        
-        let messagesRequest = NSFetchRequest(entityName: "Message")
-        
-        let createdAtSorter = NSSortDescriptor(key: "createdAt", ascending:true)
-        
-        messagesRequest.sortDescriptors = [createdAtSorter]
-        
-        do{
-            messages = try managedObjectContext.executeFetchRequest(messagesRequest) as! [Message]
-        }catch let nserror1 as NSError{
-            error = nserror1
-            messages = []
-        }
-        
-        if messages.count == 0 {
-            generateTestData()
-        }
-        
-        ////         perform a fetch request to fill an array property on your datastore
-    }
-    
-    func generateTestData() {
-        
-        let messageOne: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
-        
-        messageOne.content = "Message 1"
-        messageOne.createdAt = NSDate()
-        
-        let messageTwo: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
-        
-        messageTwo.content = "Message 2"
-        messageTwo.createdAt = NSDate()
-        
-        let messageThree: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
-        
-        messageThree.content = "Message 3"
-        messageThree.createdAt = NSDate()
-        
-        saveContext()
-        fetchData()
-    }
-
-
-}
- */
