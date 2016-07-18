@@ -11,6 +11,33 @@ import CoreData
 
 class DataStore {
     
+    static let shareDataStore = DataStore()
+    
+    var pirates: [Pirate] = []
+    
+    //    typedef NS_ENUM(NSInteger, EngineType) {
+    //    Sail=1,
+    //    Gas,
+    //    Electric,
+    //    Solar
+    //    };
+    //    @end
+    //    @implementation FISPiratesDataStore
+    //    @synthesize managedObjectContext = _managedObjectContext;
+    //
+    //    # pragma mark - Singleton
+    //
+    //    + (instancetype)sharedPiratesDataStore {
+    //    static FISPiratesDataStore *_sharedPiratesDataStore = nil;
+    //    static dispatch_once_t onceToken;
+    //    dispatch_once(&onceToken, ^{
+    //    _sharedPiratesDataStore = [[FISPiratesDataStore alloc] init];
+    //    });
+    //
+    //    return _sharedPiratesDataStore;
+    //    }
+    //
+    
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.FlatironSchool.swift_captain_morgans_relationships_lab" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -71,4 +98,123 @@ class DataStore {
             }
         }
     }
+    
+    func fetchData()
+    {
+        let pirateRequest = NSFetchRequest(entityName: "Pirate")
+        
+        let nameSorter = NSSortDescriptor(key: "Name", ascending: true)
+        
+        pirateRequest.sortDescriptors = [nameSorter]
+        
+        do {
+            
+        }
+        self.pirates = [self.managedObjectContext executeFetchRequest:pirateRequest error:nil];
+        
+        if ([self.pirates count]==0) {
+            [self generateTestData];
+        }
+    }
+    
+    func fetchData ()
+    {
+        
+        var error:NSError? = nil
+        
+        let messagesRequest = NSFetchRequest(entityName: "Message")
+        
+        let createdAtSorter = NSSortDescriptor(key: "createdAt", ascending:true)
+        
+        messagesRequest.sortDescriptors = [createdAtSorter]
+        
+        do{
+            messages = try managedObjectContext.executeFetchRequest(messagesRequest) as! [Message]
+        }catch let nserror1 as NSError{
+            error = nserror1
+            messages = []
+        }
+        
+        if messages.count == 0 {
+            generateTestData()
+        }
+        
+        ////         perform a fetch request to fill an array property on your datastore
+    }
+    
+    func generateTestData() {
+        
+        let pirateOne: Pirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
+        
+        messageOne.content = "Message 1"
+        messageOne.createdAt = NSDate()
+        
+        let messageTwo: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
+        
+        messageTwo.content = "Message 2"
+        messageTwo.createdAt = NSDate()
+        
+        let messageThree: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
+        
+        messageThree.content = "Message 3"
+        messageThree.createdAt = NSDate()
+        
+        saveContext()
+        fetchData()
+    }
 }
+
+
+/*
+class DataStore {
+ 
+    
+    func fetchData ()
+    {
+        
+        var error:NSError? = nil
+        
+        let messagesRequest = NSFetchRequest(entityName: "Message")
+        
+        let createdAtSorter = NSSortDescriptor(key: "createdAt", ascending:true)
+        
+        messagesRequest.sortDescriptors = [createdAtSorter]
+        
+        do{
+            messages = try managedObjectContext.executeFetchRequest(messagesRequest) as! [Message]
+        }catch let nserror1 as NSError{
+            error = nserror1
+            messages = []
+        }
+        
+        if messages.count == 0 {
+            generateTestData()
+        }
+        
+        ////         perform a fetch request to fill an array property on your datastore
+    }
+    
+    func generateTestData() {
+        
+        let messageOne: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
+        
+        messageOne.content = "Message 1"
+        messageOne.createdAt = NSDate()
+        
+        let messageTwo: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
+        
+        messageTwo.content = "Message 2"
+        messageTwo.createdAt = NSDate()
+        
+        let messageThree: Message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: managedObjectContext) as! Message
+        
+        messageThree.content = "Message 3"
+        messageThree.createdAt = NSDate()
+        
+        saveContext()
+        fetchData()
+    }
+
+
+}
+ */

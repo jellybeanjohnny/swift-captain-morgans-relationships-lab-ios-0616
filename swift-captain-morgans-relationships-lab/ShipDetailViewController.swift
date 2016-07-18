@@ -10,5 +10,24 @@ import UIKit
 import CoreData
 
 class ShipDetailViewController: UIViewController {
-
+    
+    var ship: Ship = Ship(context: <#T##NSManagedObjectContext#>, name: <#T##String#>, engine: <#T##Engine#>, pirate: <#T##Pirate#>)
+    
+    @IBOutlet weak var shipNameLabel: UILabel!
+    
+    @IBOutlet weak var pirateNameLabel: UILabel!
+    
+    @IBOutlet weak var propulsionTypeLabel: UILabel!
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        shipNameLabel.text = ship.name
+        
+        pirateNameLabel.text = ship.pirate.name
+        
+        propulsionTypeLabel.text = ship.engine.engineType
+    }
+    
 }
