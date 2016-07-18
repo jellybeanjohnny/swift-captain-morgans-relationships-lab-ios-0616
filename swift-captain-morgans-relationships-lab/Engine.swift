@@ -35,22 +35,22 @@ class Engine: NSManagedObject {
 //        }
     }
     
-    @NSManaged var engineType: String
+//    @NSManaged var engineType: String
+//    
+//    @NSManaged var ship: Ship
     
-    @NSManaged var ship: Ship
-    
-    init(context: NSManagedObjectContext,
-         engineType: String,
-         ship: Ship)
-    {
-        let entity = NSEntityDescription.entityForName(Engine.entityName, inManagedObjectContext: context)!
-        
-        super.init(entity: entity, insertIntoManagedObjectContext: context)
-        
-        self.engineType = engineType
-        
-        self.ship = ship
-    }
+//    init(context: NSManagedObjectContext,
+//         engineType: String,
+//         ship: Ship)
+//    {
+//        let entity = NSEntityDescription.entityForName(Engine.entityName, inManagedObjectContext: context)!
+//        
+//        super.init(entity: entity, insertIntoManagedObjectContext: context)
+//        
+//        self.engineType = engineType
+//        
+//        self.ship = ship
+//    }
     
 //    class func newEngine(context: NSManagedObjectContext) -> Engine
 //    {

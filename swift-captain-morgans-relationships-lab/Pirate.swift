@@ -12,36 +12,20 @@ import CoreData
 
 class Pirate: NSManagedObject {
     
-    static let entityName = "Pirate"
-    @NSManaged var name: String
-    @NSManaged var ships: Set<Ship>
+//    static let entityName = "Pirate"
+//    @NSManaged var name: String
+//    @NSManaged var ships: Set<Ship>
     
-    init(context: NSManagedObjectContext,
-         name: String,
-         ships: Set<Ship>)
-    {
-        let entity = NSEntityDescription.entityForName(Pirate.entityName, inManagedObjectContext: context)!
-        
-        super.init(entity: entity, insertIntoManagedObjectContext: context)
-        
-        self.name = name
-        self.ships = ships
-    }
-    
-    func addShipObject(value: Ship) {
-        
-    }
-    
-    func removeShipObject(value: Ship) {
-        
-    }
-    
-    func addShips(values: Set<Ship>) {
-        
-    }
-    
-    func removeShips(values: Set<Ship>) {
-        
-    }
+//    init(context: NSManagedObjectContext,
+//         name: String,
+//         ships: Set<Ship>)
+//    {
+//        let entity = NSEntityDescription.entityForName(Pirate.entityName, inManagedObjectContext: context)!
+//        
+//        super.init(entity: entity, insertIntoManagedObjectContext: context)
+//        
+//        self.name = name
+//        self.ships = ships
+//    }
     
 }

@@ -23,8 +23,8 @@ class ShipDetailViewController: UIViewController {
         super.viewDidLoad()
         
         shipNameLabel.text = ship.name
-        pirateNameLabel.text = ship.pirate.name
-        propulsionTypeLabel.text = ship.engine.engineType
+        pirateNameLabel.text = ship.pirate!.name
+        propulsionTypeLabel.text = ship.engine!.engineType
     }
     
 }

@@ -12,24 +12,24 @@ import CoreData
 
 final class Ship: NSManagedObject {
     
-    static let entityName = "Ship"
-    @NSManaged var name: String
-    @NSManaged var engine: Engine
-    @NSManaged var pirate: Pirate
+//    static let entityName = "Ship"
+//    @NSManaged var name: String
+//    @NSManaged var engine: Engine
+//    @NSManaged var pirate: Pirate
     
-    init(context: NSManagedObjectContext,
-         name: String,
-         engine: Engine,
-         pirate: Pirate)
-    {
-        let entity = NSEntityDescription.entityForName(Ship.entityName, inManagedObjectContext: context)!
-        
-        super.init(entity: entity, insertIntoManagedObjectContext: context)
-        
-        self.name = name
-        self.engine = engine
-        self.pirate = pirate
-    }
+//    init(context: NSManagedObjectContext,
+//         name: String,
+//         engine: Engine,
+//         pirate: Pirate)
+//    {
+//        let entity = NSEntityDescription.entityForName(Ship.entityName, inManagedObjectContext: context)!
+//        
+//        super.init(entity: entity, insertIntoManagedObjectContext: context)
+//        
+//        self.name = name
+//        self.engine = engine
+//        self.pirate = pirate
+//    }
     
 //    class func newShip(context: NSManagedObjectContext) -> Ship
 //    {

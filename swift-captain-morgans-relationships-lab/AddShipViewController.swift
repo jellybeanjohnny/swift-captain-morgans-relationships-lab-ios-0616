@@ -14,7 +14,7 @@ class AddShipViewController: UIViewController
     @IBOutlet weak var shipNameField: UITextField!
     @IBOutlet weak var engineTypeField: UITextField!
     
-    var pirate = Pirate(context: DataStore().managedObjectContext, name: "Jim" , ships: [])
+    var pirate = Pirate!()
 
     @IBAction func saveButtonTapped(sender: AnyObject)
     {
@@ -32,7 +32,7 @@ class AddShipViewController: UIViewController
         {
             newShip.name = nameText
             newShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
-            newShip.engine.engineType = engineText
+            newShip.engine!.engineType = engineText
         }
         
         do

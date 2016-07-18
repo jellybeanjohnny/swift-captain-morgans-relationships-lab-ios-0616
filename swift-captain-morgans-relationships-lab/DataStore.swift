@@ -76,18 +76,17 @@ class DataStore {
     func fetchData()
     {
         let pirateRequest = NSFetchRequest(entityName: "Pirate")
-        let nameSorter = NSSortDescriptor(key: "Name", ascending: true)
+        let nameSorter = NSSortDescriptor(key: "name", ascending: true)
         pirateRequest.sortDescriptors = [nameSorter]
         
         do
         {
-            try pirates = managedObjectContext.executeFetchRequest(pirateRequest) as! [Pirate]
+            pirates = try managedObjectContext.executeFetchRequest(pirateRequest) as! [Pirate]
         }
         
-        catch
+        catch let error as NSError
         {
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            NSLog("Unresolved error \(error), \(error.userInfo)")
             pirates = []
         }
         
@@ -104,14 +103,14 @@ class DataStore {
         for pirateNumber in 0..<numberOfShips.count
         {
             let currentPirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
-            currentPirate.name = "AAARGH! Pirate #" + String(pirateNumber)
+            currentPirate.name = "AAARGH! Pirate #" + String(pirateNumber + 1)
             
             for shipNumber in 0..<numberOfShips[pirateNumber]
             {
                 let currentShip = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
                 currentShip.name = "Awesome Ship #" + String(shipNumber)
                 currentShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
-                currentShip.engine.engineType = Engine.randomEngineType()
+                currentShip.engine!.engineType = Engine.randomEngineType()
                 currentPirate.ships.insert(currentShip)
             }
         }

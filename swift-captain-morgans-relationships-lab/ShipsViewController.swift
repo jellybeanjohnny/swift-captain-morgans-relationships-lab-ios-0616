@@ -43,7 +43,7 @@ class ShipsViewController: UITableViewController
         let ships = Array(pirate.ships)
         let currentShip = ships[indexPath.row]
         cell.textLabel?.text = currentShip.name
-        cell.detailTextLabel?.text = currentShip.engine.engineType
+        cell.detailTextLabel?.text = currentShip.engine!.engineType
         return cell
     }
     
