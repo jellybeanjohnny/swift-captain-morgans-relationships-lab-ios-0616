@@ -14,6 +14,8 @@ class Pirate: NSManagedObject {
     @NSManaged var name: String
     @NSManaged var ships: Set<Ship>
     
+    init
+    
     func addShipsObject(value: Ship) {
         
     }
@@ -29,4 +31,5 @@ class Pirate: NSManagedObject {
     func removeShips(values: Set<Ship>) {
         
     }
+    
 }

@@ -14,15 +14,16 @@ class AddShipViewController: UIViewController
     @IBOutlet weak var shipNameField: UITextField!
     @IBOutlet weak var engineTypeField: UITextField!
     
-    let pirate: Pirate
+    var pirate = Pirate()
 
     @IBAction func saveButtonTapped(sender: AnyObject)
     {
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let dataStore = DataStore()
+        let managedObjectContext = dataStore.managedObjectContext
         let entityDescription = NSEntityDescription.entityForName("Ship",
                                                                   inManagedObjectContext: managedObjectContext)
         let newShip = Ship(entity: entityDescription!,
-                               insertIntoManagedObjectContext: managedObjectContext)
+                           insertIntoManagedObjectContext: managedObjectContext)
         
         if let nameText = shipNameField.text, let engineText = engineTypeField.text
         {

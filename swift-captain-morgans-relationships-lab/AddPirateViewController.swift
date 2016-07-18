@@ -15,7 +15,8 @@ class AddPirateViewController: UIViewController
     
     @IBAction func saveButtonTapped(sender: AnyObject)
     {
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let dataStore = DataStore()
+        let managedObjectContext = dataStore.managedObjectContext
         let entityDescription = NSEntityDescription.entityForName("Pirate",
                                                                   inManagedObjectContext: managedObjectContext)
         let newPirate = Pirate(entity: entityDescription!,

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
-    <entity name="Engine" representedClassName="Engine" syncable="YES">
+    <entity name="Engine" representedClassName="swift-captain-morgans-relationships-labEngine.Engine" syncable="YES">
         <attribute name="engineType" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ship" inverseName="engine" inverseEntity="Ship" syncable="YES"/>
     </entity>
-    <entity name="Pirate" representedClassName="Pirate" syncable="YES">
+    <entity name="Pirate" representedClassName="swift-captain-morgans-relationships-labPirate.Pirate" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ships" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ship" inverseName="pirate" inverseEntity="Ship" syncable="YES"/>
     </entity>
-    <entity name="Ship" representedClassName="Ship" syncable="YES">
+    <entity name="Ship" representedClassName="swift-captain-morgans-relationships-labShip.Ship" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="engine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Engine" inverseName="ship" inverseEntity="Engine" syncable="YES"/>
         <relationship name="pirate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pirate" inverseName="ships" inverseEntity="Pirate" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Engine" positionX="-137" positionY="-18" width="128" height="73"/>
-        <element name="Pirate" positionX="-135" positionY="143" width="128" height="73"/>
-        <element name="Ship" positionX="153" positionY="38" width="128" height="88"/>
+        <element name="Engine" positionX="-137" positionY="-18" width="128" height="75"/>
+        <element name="Pirate" positionX="-135" positionY="143" width="128" height="75"/>
+        <element name="Ship" positionX="153" positionY="38" width="128" height="90"/>
     </elements>
 </model>

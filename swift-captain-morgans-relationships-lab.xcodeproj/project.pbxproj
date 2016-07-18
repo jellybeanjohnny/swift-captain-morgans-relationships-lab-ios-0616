@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C45CA8A1D3A9A7F0030A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */; };
-		4C45CA8C1D3A9A7F0030A41D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CA8B1D3A9A7F0030A41D /* ViewController.swift */; };
 		4C45CA8F1D3A9A7F0030A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */; };
 		4C45CA921D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CA901D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld */; };
 		4C45CA941D3A9A7F0030A41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA931D3A9A7F0030A41D /* Assets.xcassets */; };
@@ -52,7 +51,6 @@
 		45B507D73D8F05329C3EF68A /* Pods-swift-captain-morgans-relationships-labTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-captain-morgans-relationships-labTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-captain-morgans-relationships-labTests/Pods-swift-captain-morgans-relationships-labTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C45CA861D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-captain-morgans-relationships-lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C45CA8B1D3A9A7F0030A41D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C45CA8E1D3A9A7F0030A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C45CA911D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = swift_captain_morgans_relationships_lab.xcdatamodel; sourceTree = "<group>"; };
 		4C45CA931D3A9A7F0030A41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */,
-				4C45CA8B1D3A9A7F0030A41D /* ViewController.swift */,
 				4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */,
 				4C45CA931D3A9A7F0030A41D /* Assets.xcassets */,
 				4C45CA951D3A9A7F0030A41D /* LaunchScreen.storyboard */,
@@ -457,7 +454,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C45CA8C1D3A9A7F0030A41D /* ViewController.swift in Sources */,
 				4C45CACB1D3AAEA60030A41D /* DataStore.swift in Sources */,
 				4C45CAC71D3AADDD0030A41D /* PiratesViewController.swift in Sources */,
 				4C45CABF1D3AACF20030A41D /* Engine.swift in Sources */,

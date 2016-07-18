@@ -7,7 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
-class PiratesViewController: UITableViewController {
+class PiratesViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    var dataStore: DataStore = DataStore()
+    
+    var frc: NSFetchedResultsController?
+    
+    static let CellIdentifier  = "pirateCell"
+    
+    override func viewDidLoad() {
+        let model = dataStore.managedObjectModel
+        
+        
+    }
 
 }
