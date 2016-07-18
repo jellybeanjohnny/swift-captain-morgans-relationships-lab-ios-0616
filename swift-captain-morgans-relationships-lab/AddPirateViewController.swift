@@ -17,9 +17,7 @@ class AddPirateViewController: UIViewController
     {
         let dataStore = DataStore()
         let managedObjectContext = dataStore.managedObjectContext
-        let entityDescription = NSEntityDescription.entityForName("Pirate",
-                                                                  inManagedObjectContext: managedObjectContext)
-        let newPirate = Pirate()
+        let newPirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
         
         if let text = pirateNameField.text
         {
