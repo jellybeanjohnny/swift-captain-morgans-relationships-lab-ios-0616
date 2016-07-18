@@ -19,6 +19,7 @@ class Engine: NSManagedObject {
         case Gas = "Gas"
         case Electric = "Electric"
         case Solar = "Solar"
+        case Oars = "Oars"
         
 //        var description: String {
 //            switch self {
@@ -62,7 +63,7 @@ class Engine: NSManagedObject {
     
     class func randomEngineType() -> String
     {
-        let randomInt = Int(arc4random_uniform(3))
+        let randomInt = Int(arc4random_uniform(5))
         
         switch (randomInt)
         {
@@ -74,6 +75,8 @@ class Engine: NSManagedObject {
             return EngineType.Electric.rawValue
         case 3:
             return EngineType.Solar.rawValue
+        default:
+            return EngineType.Oars.rawValue
         }
     }
 }

@@ -12,22 +12,19 @@ import CoreData
 class ShipDetailViewController: UIViewController {
     
     let store = DataStore.shareDataStore
-    
-    var ship: Ship?
+    var ship: Ship!
     
     @IBOutlet weak var shipNameLabel: UILabel!
-    
     @IBOutlet weak var pirateNameLabel: UILabel!
-    
     @IBOutlet weak var propulsionTypeLabel: UILabel!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        shipNameLabel.text = ship?.name
-        pirateNameLabel.text = ship?.pirate.name
-        propulsionTypeLabel.text = ship?.engine.engineType
+        shipNameLabel.text = ship.name
+        pirateNameLabel.text = ship.pirate.name
+        propulsionTypeLabel.text = ship.engine.engineType
     }
     
 }

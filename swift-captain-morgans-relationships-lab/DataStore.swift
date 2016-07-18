@@ -77,9 +77,7 @@ class DataStore {
     func fetchData()
     {
         let pirateRequest = NSFetchRequest(entityName: "Pirate")
-        
         let nameSorter = NSSortDescriptor(key: "Name", ascending: true)
-        
         pirateRequest.sortDescriptors = [nameSorter]
         
         do
@@ -102,33 +100,24 @@ class DataStore {
     
     func generateTestData()
     {
-        var numberOfShips = [3, 5, 2]
+        var numberOfShips = [4, 3, 5]
         
-        for pirateCount in 0..<numberOfShips.count
+        for pirateNumber in 0..<numberOfShips.count
         {
-            let currentPirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate",
-                                                                                    inManagedObjectContext: managedObjectContext) as! Pirate
+            let currentPirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
+            currentPirate.name = "AAARGH! Pirate #" + String(pirateNumber)
             
-            currentPirate.name = "AAARGH! Pirate #" + String(pirateCount)
-            
-            for _ in 0..<numberOfShips[pirateCount]
+            for shipNumber in 0..<numberOfShips[pirateNumber]
             {
-                let currentShip = NSEntityDescription.insertNewObjectForEntityForName("Ship",
-                                                                                     inManagedObjectContext: managedObjectContext) as! Ship
-                
-                currentShip.name = "Awesome Ship #" + String(pirateCount)
-                
-                currentShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine",
-                                                                                         inManagedObjectContext: managedObjectContext) as! Engine
-                
+                let currentShip = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
+                currentShip.name = "Awesome Ship #" + String(shipNumber)
+                currentShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
                 currentShip.engine.engineType = Engine.randomEngineType()
-                
-//                currentPirate.addShipsObject(currentShip)
+                currentPirate.addShipObject(currentShip)
             }
         }
         
         saveContext()
-        
         fetchData()
     }
 }

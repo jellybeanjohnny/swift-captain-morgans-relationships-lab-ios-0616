@@ -13,9 +13,7 @@ import CoreData
 class Pirate: NSManagedObject {
     
     static let entityName = "Pirate"
-    
     @NSManaged var name: String
-    
     @NSManaged var ships: Set<Ship>
     
     init(context: NSManagedObjectContext,
@@ -27,11 +25,10 @@ class Pirate: NSManagedObject {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
         
         self.name = name
-        
         self.ships = ships
     }
     
-    func addShipsObject(value: Ship) {
+    func addShipObject(value: Ship) {
         
     }
     

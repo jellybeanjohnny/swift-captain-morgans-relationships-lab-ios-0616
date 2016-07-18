@@ -12,9 +12,6 @@ import CoreData
 class PiratesViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     var store: DataStore = DataStore.shareDataStore
-    
-    var frc: NSFetchedResultsController?
-    
     let CellIdentifier  = "pirateCell"
     
     override func viewDidLoad()
@@ -25,11 +22,8 @@ class PiratesViewController: UITableViewController, NSFetchedResultsControllerDe
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(true)
-        
         let store = DataStore.shareDataStore
-        
         store.fetchData()
-        
         tableView.reloadData()
     }
     
@@ -41,15 +35,10 @@ class PiratesViewController: UITableViewController, NSFetchedResultsControllerDe
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
-        
         let pirates = Array(store.pirates)
-        
         let currentPirate = pirates[indexPath.row]
-        
         cell.textLabel?.text = currentPirate.name
-        
         cell.detailTextLabel?.text = String.init(format: "%lu", currentPirate.ships.count)
-        
         return cell
     }
     
@@ -61,11 +50,8 @@ class PiratesViewController: UITableViewController, NSFetchedResultsControllerDe
         }
             
         let nextVC = segue.destinationViewController as! ShipsViewController
-        
         let selectedIndexPath = tableView.indexPathForSelectedRow!
-        
         let selectedPirate = store.pirates[selectedIndexPath.row]
-        
         nextVC.pirate = selectedPirate
     }
     

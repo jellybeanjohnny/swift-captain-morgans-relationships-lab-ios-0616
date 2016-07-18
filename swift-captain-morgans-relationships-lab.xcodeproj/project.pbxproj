@@ -151,14 +151,14 @@
 				4C45CA951D3A9A7F0030A41D /* LaunchScreen.storyboard */,
 				4C45CA981D3A9A7F0030A41D /* Info.plist */,
 				4C45CA901D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld */,
-				4C45CABA1D3AACDB0030A41D /* Ship.swift */,
 				4C45CABC1D3AACE60030A41D /* Pirate.swift */,
+				4C45CABA1D3AACDB0030A41D /* Ship.swift */,
 				4C45CABE1D3AACF20030A41D /* Engine.swift */,
-				4C45CAC01D3AAD400030A41D /* AddShipViewController.swift */,
-				4C45CAC21D3AAD720030A41D /* AddPirateViewController.swift */,
-				4C45CAC41D3AADB20030A41D /* ShipDetailViewController.swift */,
 				4C45CAC61D3AADDD0030A41D /* PiratesViewController.swift */,
 				4C45CAC81D3AADF10030A41D /* ShipsViewController.swift */,
+				4C45CAC41D3AADB20030A41D /* ShipDetailViewController.swift */,
+				4C45CAC21D3AAD720030A41D /* AddPirateViewController.swift */,
+				4C45CAC01D3AAD400030A41D /* AddShipViewController.swift */,
 				4C45CACA1D3AAEA60030A41D /* DataStore.swift */,
 			);
 			path = "swift-captain-morgans-relationships-lab";

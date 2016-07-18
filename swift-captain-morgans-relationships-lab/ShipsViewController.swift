@@ -11,29 +11,23 @@ import CoreData
 
 class ShipsViewController: UITableViewController
 {
-    
     var store: DataStore = DataStore.shareDataStore
-    
-    var frc: NSFetchedResultsController?
-    
     let CellIdentifier: String = "shipCell"
-    
-    var pirate: Pirate
+    var pirate: Pirate!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        let managedObjectContext = store.managedObjectContext
+        pirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
     }
     
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(true)
-        
         let store = DataStore.shareDataStore
-        
         store.fetchData()
-                
         tableView.reloadData()
     }
     
@@ -46,15 +40,10 @@ class ShipsViewController: UITableViewController
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
-        
         let ships = Array(pirate.ships)
-        
         let currentShip = ships[indexPath.row]
-        
         cell.textLabel?.text = currentShip.name
-        
         cell.detailTextLabel?.text = currentShip.engine.engineType
-        
         return cell
     }
     
@@ -63,18 +52,14 @@ class ShipsViewController: UITableViewController
         if segue.identifier == "shipDetailSegue"
         {
             let nextVC = segue.destinationViewController as! AddShipViewController
-            
             nextVC.pirate = pirate
         }
             
         else
         {
             let nextVC = segue.destinationViewController as! ShipDetailViewController
-            
             let selectedIndexPath = tableView.indexPathForSelectedRow!
-            
             let ships = Array(pirate.ships)
-            
             nextVC.ship = ships[selectedIndexPath.row]
         }
     }
