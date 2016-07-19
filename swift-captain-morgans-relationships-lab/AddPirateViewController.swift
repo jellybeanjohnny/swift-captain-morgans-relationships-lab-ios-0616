@@ -15,24 +15,25 @@ class AddPirateViewController: UIViewController
     
     @IBAction func saveButtonTapped(sender: AnyObject)
     {
-        let dataStore = DataStore()
-        let managedObjectContext = dataStore.managedObjectContext
-        let newPirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
-        
-        if let text = pirateNameField.text
+        if let text = pirateNameField.text where pirateNameField.text?.characters.count > 0
         {
+            let dataStore = DataStore()
+            let managedObjectContext = dataStore.managedObjectContext
+            let newPirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
+            
             newPirate.name = text
-        }
+            
+            do
+            {
+                try managedObjectContext.save()
+            } catch let error
+            {
+                print("Could not save Pirate: \(error)")
+            }
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
 
-        do
-        {
-            try managedObjectContext.save()
-        } catch let error
-        {
-            print("Could not save Pirate: \(error)")
         }
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
 }
     
     @IBAction func cancelButtonTapped(sender: AnyObject)
