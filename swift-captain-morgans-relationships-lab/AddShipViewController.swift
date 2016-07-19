@@ -19,25 +19,25 @@ class AddShipViewController: UIViewController
     
     @IBAction func saveButtonTapped(sender: AnyObject)
     {
-        let dataStore = DataStore()
-        let managedObjectContext = dataStore.managedObjectContext
-        let newShip: Ship = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
-        
-        if let nameText = shipNameField.text, let engineText = engineTypeField.text
+        if let nameText = shipNameField.text, let engineText = engineTypeField.text where shipNameField.text?.characters.count > 0 && engineTypeField.text?.characters.count > 0
         {
+            let dataStore = DataStore()
+            let managedObjectContext = dataStore.managedObjectContext
+            let newShip: Ship = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
+            
             newShip.name = nameText
             newShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
             newShip.engine.engineType = engineText
+            
+            do
+            {
+                try managedObjectContext.save()
+            } catch let error
+            {
+                print("Jim sunk your ship: \(error)")
+            }
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
-        
-        do
-        {
-            try managedObjectContext.save()
-        } catch let error
-        {
-            print("Jim sunk your ship: \(error)")
-        }
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
