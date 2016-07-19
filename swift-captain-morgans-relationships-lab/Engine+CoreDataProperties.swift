@@ -14,7 +14,7 @@ import CoreData
 
 extension Engine {
 
-    @NSManaged var engineType: String?
-    @NSManaged var ship: Ship?
+    @NSManaged var engineType: String
+    @NSManaged var ship: Ship
 
 }

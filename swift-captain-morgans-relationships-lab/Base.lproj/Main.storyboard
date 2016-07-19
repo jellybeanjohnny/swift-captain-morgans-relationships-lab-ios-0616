@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AxG-62-bKF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AxG-62-bKF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -165,7 +165,7 @@
                     <navigationItem key="navigationItem" id="cH0-aR-NDs"/>
                     <connections>
                         <outlet property="pirateNameLabel" destination="yyV-6T-Sex" id="GKq-a9-Tc9"/>
-                        <outlet property="propTypeLabel" destination="pM5-Vc-g5y" id="Wbm-KS-7jW"/>
+                        <outlet property="propulsionTypeLabel" destination="pM5-Vc-g5y" id="oAs-xj-SzZ"/>
                         <outlet property="shipNameLabel" destination="84Z-KN-pLs" id="WWU-ON-P1M"/>
                     </connections>
                 </viewController>
@@ -219,7 +219,7 @@
                     <navigationItem key="navigationItem" title="Ships" id="hJY-gC-SCw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vUz-HS-CSL">
                             <connections>
-                                <segue destination="TBS-cg-Qyo" kind="modal" id="HVt-v1-NkP"/>
+                                <segue destination="TBS-cg-Qyo" kind="modal" identifier="" id="HVt-v1-NkP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

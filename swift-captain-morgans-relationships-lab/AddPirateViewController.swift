@@ -27,9 +27,7 @@ class AddPirateViewController: UIViewController
         do
         {
             try managedObjectContext.save()
-        }
-        
-        catch let error
+        } catch let error
         {
             print("Could not save Pirate: \(error)")
         }

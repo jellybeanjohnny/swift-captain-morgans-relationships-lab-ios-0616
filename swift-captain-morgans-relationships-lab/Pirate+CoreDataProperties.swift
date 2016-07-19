@@ -14,7 +14,7 @@ import CoreData
 
 extension Pirate {
 
-    @NSManaged var name: String?
+    @NSManaged var name: String
     @NSManaged var ships: Set<Ship>
 
 }

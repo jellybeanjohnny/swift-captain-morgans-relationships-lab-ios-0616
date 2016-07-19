@@ -14,8 +14,8 @@ import CoreData
 
 extension Ship {
 
-    @NSManaged var name: String?
-    @NSManaged var engine: Engine?
-    @NSManaged var pirate: Pirate?
+    @NSManaged var name: String
+    @NSManaged var engine: Engine
+    @NSManaged var pirate: Pirate
 
 }

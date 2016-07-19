@@ -9,10 +9,10 @@
 import UIKit
 import CoreData
 
-class PiratesViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-    
-    var store: DataStore = DataStore.shareDataStore
+class PiratesViewController: UITableViewController, NSFetchedResultsControllerDelegate
+{
     let CellIdentifier  = "pirateCell"
+    var store: DataStore = DataStore.shareDataStore
     
     override func viewDidLoad()
     {
@@ -44,15 +44,13 @@ class PiratesViewController: UITableViewController, NSFetchedResultsControllerDe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if segue.identifier != "shipsSegue"
+        if segue.identifier == "shipsSegue"
         {
-            return
+            let nextVC = segue.destinationViewController as! ShipsViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            let selectedPirate = store.pirates[selectedIndexPath.row]
+            nextVC.pirate = selectedPirate
         }
-            
-        let nextVC = segue.destinationViewController as! ShipsViewController
-        let selectedIndexPath = tableView.indexPathForSelectedRow!
-        let selectedPirate = store.pirates[selectedIndexPath.row]
-        nextVC.pirate = selectedPirate
     }
     
 }

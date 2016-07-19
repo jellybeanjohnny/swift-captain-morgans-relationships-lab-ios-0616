@@ -9,8 +9,8 @@
 import UIKit
 import CoreData
 
-class ShipDetailViewController: UIViewController {
-    
+class ShipDetailViewController: UIViewController
+{    
     let store = DataStore.shareDataStore
     var ship: Ship!
     
@@ -23,8 +23,8 @@ class ShipDetailViewController: UIViewController {
         super.viewDidLoad()
         
         shipNameLabel.text = ship.name
-        pirateNameLabel.text = ship.pirate!.name
-        propulsionTypeLabel.text = ship.engine!.engineType
+        pirateNameLabel.text = ship.pirate.name
+        propulsionTypeLabel.text = ship.engine.engineType
     }
     
 }

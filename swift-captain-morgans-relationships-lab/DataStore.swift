@@ -108,9 +108,9 @@ class DataStore {
             for shipNumber in 0..<numberOfShips[pirateNumber]
             {
                 let currentShip = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
-                currentShip.name = "Awesome Ship #" + String(shipNumber)
+                currentShip.name = "Awesome Ship #" + String(shipNumber + 1)
                 currentShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
-                currentShip.engine!.engineType = Engine.randomEngineType()
+                currentShip.engine.engineType = Engine.randomEngineType()
                 currentPirate.ships.insert(currentShip)
             }
         }
