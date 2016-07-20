@@ -9,42 +9,52 @@
 import UIKit
 import CoreData
 
-class AddShipViewController: UIViewController
-{
+class AddShipViewController: UIViewController {
+    
     @IBOutlet weak var shipNameField: UITextField!
     @IBOutlet weak var engineTypeField: UITextField!
     
-    
     var pirate: Pirate!
+    let dataStore = DataStore.shareDataStore
     
-    @IBAction func saveButtonTapped(sender: AnyObject)
-    {
-        if let nameText = shipNameField.text, let engineText = engineTypeField.text where shipNameField.text?.characters.count > 0 && engineTypeField.text?.characters.count > 0
-        {
-            let dataStore = DataStore()
-            let managedObjectContext = dataStore.managedObjectContext
-            let newShip: Ship = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
-            
-            newShip.name = nameText
-            newShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
-            newShip.engine.engineType = engineText
-            
-            do
-            {
-                try managedObjectContext.save()
-            } catch let error
-            {
-                print("Jim sunk your ship: \(error)")
-            }
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-    }
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        guard let shipName = shipNameField.text where shipName.characters.count > 0 else { print("Ship name too short"); return }
+        guard let engineName = engineTypeField.text where engineName.characters.count > 0 else { print("Engine name too short."); return }
+        
+        createShip(shipName: shipName, engineName: engineName)
     
-    
-    @IBAction func cancelButtonTapped(sender: AnyObject)
-    {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
+    @IBAction func cancelButtonTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+}
 
+// MARK: Create new Ship for Pirate
+extension AddShipViewController {
+    
+    private func createShip(shipName ship: String, engineName engine: String) {
+        let managedObjectContext = dataStore.managedObjectContext
+        let newShip: Ship = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
+        
+        newShip.name = ship
+        newShip.engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
+        newShip.engine.engineType = engine
+        
+        pirate.ships.insert(newShip)
+        
+        do {
+            try managedObjectContext.save()
+            print("Save wokred.")
+        } catch let error {
+            print("Jim sunk your ship: \(error)")
+        }
+
+        
+    }
+    
+    
 }
