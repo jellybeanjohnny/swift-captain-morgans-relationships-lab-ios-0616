@@ -14,30 +14,28 @@ class ShipsViewController: UITableViewController
     let CellIdentifier: String = "shipCell"
     var store: DataStore = DataStore.shareDataStore
     var pirate: Pirate!
-    var ships: [Ship] = []
+    var ships: [Ship] = [] {
+        didSet {
+            print("Reloading data.")
+            tableView.reloadData()
+        }
+    }
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool)
-    {
+    override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         ships = Array(pirate.ships)
-        let store = DataStore.shareDataStore
-        store.fetchData()
-        tableView.reloadData()
     }
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pirate.ships.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
         let currentShip = ships[indexPath.row]
         cell.textLabel?.text = currentShip.name
@@ -45,18 +43,13 @@ class ShipsViewController: UITableViewController
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if segue.identifier == "shipDetailSegue"
-        {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "shipDetailSegue" {
             
             let nextVC = segue.destinationViewController as! ShipDetailViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow!
             nextVC.ship = ships[selectedIndexPath.row]
-        }
-            
-        else
-        {
+        } else {
             let nextVC = segue.destinationViewController as! AddShipViewController            
             nextVC.pirate = self.pirate
         }
