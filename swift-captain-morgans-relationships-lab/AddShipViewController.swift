@@ -36,6 +36,7 @@ class AddShipViewController: UIViewController
             {
                 print("Jim sunk your ship: \(error)")
             }
+            
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
